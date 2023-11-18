@@ -38,5 +38,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          github-token: ${{ github.token }}
           tags: tygozwolle/rpi-system-sensors-docker:latest
