@@ -23,12 +23,12 @@ jobs:
         with:
           name: workspace_artifacts
           path: ${{ github.workspace }}
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io/tygozolle/rpi-system-sensors-docker
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}          
+ #     - name: Login to GitHub Container Registry
+  #      uses: docker/login-action@v3
+   #     with:
+    #      registry: ghcr.io/tygozolle/rpi-system-sensors-docker
+     #     username: ${{ github.actor }}
+      #    password: ${{ secrets.GITHUB_TOKEN }}          
 #      - name: Publish Image
  #       uses: matootie/github-docker@v3.0.0
   #      with:
@@ -38,4 +38,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
+          github-token: ${{ github.token }}
           tags: tygozwolle/rpi-system-sensors-docker:latest
