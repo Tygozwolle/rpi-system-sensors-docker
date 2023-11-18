@@ -35,7 +35,7 @@ jobs:
    #       accessToken: ${{ github.token }}
       -
         name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v3.2.0
         with:
           push: true
           github-token: ${{ github.token }}
