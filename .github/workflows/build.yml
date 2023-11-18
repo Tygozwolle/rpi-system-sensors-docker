@@ -38,4 +38,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: tygozwolle/rpi-system-sensors-docker:latest
+          tags: tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:latest
