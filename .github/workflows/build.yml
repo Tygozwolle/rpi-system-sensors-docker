@@ -23,7 +23,13 @@ jobs:
         with:
           name: workspace_artifacts
           path: ${{ github.workspace }}
-      - name: Publish Image
-        uses: matootie/github-docker@v3.0.0
+#      - name: Publish Image
+ #       uses: matootie/github-docker@v3.0.0
+  #      with:
+   #       accessToken: ${{ github.token }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
         with:
-          accessToken: ${{ github.token }}
+          push: true
+          tags: user/app:latest
