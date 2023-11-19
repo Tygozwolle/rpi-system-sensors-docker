@@ -1,9 +1,8 @@
 name: ci
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - 'master'
 env:
   TEST_TAG: user/app:test
 jobs:
@@ -41,5 +40,4 @@ jobs:
           push: true
           tags: tygozwolle/rpi-system-sensors-docker:latest
           
-      - name: Release
-        uses: softprops/action-gh-release@v1
+
