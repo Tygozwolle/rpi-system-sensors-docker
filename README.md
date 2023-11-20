@@ -36,7 +36,7 @@ SENSORS_WIFI_SSID (default 'true')
 ```
 
 ## Examples
-d
+
 ### docker-compose.yml
 
 ```yaml
