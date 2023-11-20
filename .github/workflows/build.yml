@@ -3,6 +3,9 @@ name: ci
 on:
   workflow_dispatch:
   push:
+  schedule:
+    - cron: 30 11 * * *
+  
 env:
   TEST_TAG: user/app:test
 jobs:
