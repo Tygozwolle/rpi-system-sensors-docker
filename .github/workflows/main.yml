@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
   pull_request:
+  check_run:
   
   schedule:
     - cron: 30 11 * * *
