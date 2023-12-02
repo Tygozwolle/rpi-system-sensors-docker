@@ -2,7 +2,7 @@ name: testbuildextern
 
 on:
   workflow_dispatch:
-
+  repository_dispatch:
   
 env:
   TEST_TAG: user/app:test
