@@ -9,7 +9,7 @@ RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.2.0
 
 FROM python:3.9-alpine
 RUN apk add bash wireless-tools
-RUN python -m pip install apt
+RUN python -m pip install python-apt
 
 WORKDIR /app
 
