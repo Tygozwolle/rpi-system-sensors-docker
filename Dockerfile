@@ -6,10 +6,10 @@ RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/hea
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.2.0
-RUN pip install git+https://salsa.debian.org/apt-team/python-apt.git@1.1.0_beta5
+
 FROM python:3.9-alpine
 RUN apk add bash wireless-tools
-
+RUN apk add bash apt
 
 WORKDIR /app
 
