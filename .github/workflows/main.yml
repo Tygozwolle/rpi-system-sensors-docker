@@ -5,6 +5,7 @@ on:
   push:
   pull_request:
   check_run:
+  repository_dispatch:
   
   schedule:
     - cron: 30 11 * * *
