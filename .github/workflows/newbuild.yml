@@ -16,9 +16,12 @@ jobs:
       matrix:
         platform:
           - linux/amd64
-          - linux/arm/v6
-          - linux/arm/v7
           - linux/arm64
+          - linux/386
+          - linux/arm/v7
+          - linux/arm/v6
+          - linux/arm/v8
+          - linux/arm/v9
     steps:
       - name: Checkout
         uses: actions/checkout@v4
