@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY_IMAGE: Tygozwolle/rpi-system-sensors-docker
+  REGISTRY_IMAGE: ghcr.io/Tygozwolle/rpi-system-sensors-docker
 
 jobs:
   build:
