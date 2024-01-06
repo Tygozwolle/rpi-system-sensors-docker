@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
     inputs:
      version:
-  
+  push:
+  tags:
+    - v1.**
 
   
 env:
