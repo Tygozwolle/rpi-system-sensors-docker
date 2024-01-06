@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
   pull_request:
-  #check_run:
+  check_run:
   repository_dispatch:
   
   schedule:
