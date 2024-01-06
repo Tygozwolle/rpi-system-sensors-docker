@@ -2,7 +2,9 @@ name: testbuildsplit2
 
 on:
   workflow_dispatch:
-  #push:
+  push:
+    branches:
+      - master
   pull_request:
   #check_run:
   repository_dispatch:
