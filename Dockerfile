@@ -14,7 +14,7 @@ RUN apk add bash apt
 WORKDIR /app
 
 COPY --from=build /app /app
-COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
+COPY --from=build /usr/local/lib/python3.19/site-packages /usr/local/lib/python3.19/site-packages
 COPY ./ ./
 RUN chmod a+x ./system_sensors.sh
 RUN chmod a+x ./envsubst
