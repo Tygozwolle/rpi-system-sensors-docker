@@ -5,7 +5,7 @@ on:
     inputs:
      version:
   push:
-  tags:
+    tags:
     - v1.**
 
   
