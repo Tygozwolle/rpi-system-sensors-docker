@@ -1,6 +1,6 @@
 # Dockerized RPI System Sensors
 
-Alpine-based docker image of the RPI System sensors project: <https://github.com/Sennevds/system_sensors>
+Alpine-based docker image of the RPI System sensors project: <https://github.com/tygozwolle/system_sensors>
 
 ## Environment Variables
 ```
