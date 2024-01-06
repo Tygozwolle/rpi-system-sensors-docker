@@ -6,10 +6,7 @@ on:
   pull_request:
   #check_run:
   repository_dispatch:
-  
-  schedule:
-    - cron: 30 11 * * *
-  
+    
 env:
   TEST_TAG: user/app:test
 jobs:
