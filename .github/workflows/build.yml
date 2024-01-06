@@ -7,7 +7,7 @@ on:
 env:
   TEST_TAG: user/app:test
 jobs:
-  docker:
+  dockerpush:
     runs-on: ubuntu-latest
     steps:
       -
