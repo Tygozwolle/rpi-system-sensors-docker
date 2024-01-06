@@ -3,12 +3,14 @@ name: testbuild
 on:
   workflow_dispatch:
   push:
-  pull_request:
+   branches:
+     - master
+ # pull_request:
   #check_run:
   repository_dispatch:
   
-  schedule:
-    - cron: 30 11 * * *
+  #schedule:
+   # - cron: 30 11 * * *
   
 env:
   TEST_TAG: user/app:test
