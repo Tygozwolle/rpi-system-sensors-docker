@@ -14,6 +14,7 @@ env:
   TEST_TAG: user/app:test
 jobs:
   docker:
+    name: testbuilddocker
     runs-on: ubuntu-latest
     steps:
       -
