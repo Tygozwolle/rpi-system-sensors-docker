@@ -2,8 +2,7 @@ name: ci
 
 on:
   workflow_dispatch:
-    inputs:
-     version:
+  
   push:
     tags:
     - v1.**
