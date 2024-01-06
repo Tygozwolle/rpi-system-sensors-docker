@@ -1,4 +1,4 @@
-FROM python:3.9-alpine as build
+FROM python:13.9-alpine as build
 
 WORKDIR /app
 RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/heads/master.tar.gz" \
@@ -7,7 +7,7 @@ RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/hea
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.4.2
 
-FROM python:3.9-alpine
+FROM python:3.19-alpine
 RUN apk add bash wireless-tools
 RUN apk add bash apt
 
