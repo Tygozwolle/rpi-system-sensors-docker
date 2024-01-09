@@ -1,8 +1,8 @@
 FROM python:3.11-alpine as build
 
 WORKDIR /app
-RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/heads/master.tar.gz" \
-  && tar -xvzf /tmp/master.tar.gz -C /app --strip-components 1 \
+RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/tags/2.0.0.tar.gz" \
+  && tar -xvzf /tmp/2.0.0.tar.gz -C /app --strip-components 1 \
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.4.2
