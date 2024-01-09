@@ -45,7 +45,7 @@ version: "3"
 services:
 
   sensors:
-    image: tomquist/rpi-system-sensors:latest
+    image: tygozwolle/rpi-system-sensors-docker:latest
     container_name: system-sensors
     hostname: rpi
     environment:
@@ -65,6 +65,6 @@ docker run -d \
   -h $(hostname -f)
   --device /dev/vchiq \
   -e MQTT_HOST=192.168.100.100 \
-  tomquist/rpi-system-sensors:latest
+  tygozwolle/rpi-system-sensors-docker:latest
 ```
 
