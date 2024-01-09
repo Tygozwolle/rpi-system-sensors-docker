@@ -1,4 +1,4 @@
-name: testbuild
+name: testbuild dev
 
 on:
   workflow_dispatch:
@@ -47,5 +47,5 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9
-          push: false
-          tags: tygozwolle/rpi-system-sensors-docker:latest
+          push: true
+          tags: tygozwolle/rpi-system-sensors-docker:dev
