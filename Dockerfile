@@ -1,4 +1,4 @@
-FROM python:3.11.7-alpine3.19 as build
+FROM python:3.12.1-alpine3.19 as build
 
 WORKDIR /app
 USER root
@@ -8,14 +8,14 @@ RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/tag
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.4.2
 
-FROM python:3.11.7-alpine3.19
+FROM python:3.12.1-alpine3.19
 RUN apk add bash wireless-tools
 RUN apk add bash apt
 
 WORKDIR /app
 
 COPY --from=build /app /app
-COPY --from=build /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 COPY ./ ./
 RUN chmod a+x ./system_sensors.sh
 RUN chmod a+x ./envsubst
