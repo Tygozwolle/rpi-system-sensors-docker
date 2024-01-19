@@ -1,6 +1,7 @@
 FROM python:3.11.7-alpine as build
 
 WORKDIR /app
+USER root
 RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/tags/2.0.0.tar.gz" \
   && tar -xvzf /tmp/2.0.0.tar.gz -C /app --strip-components 1 \
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
