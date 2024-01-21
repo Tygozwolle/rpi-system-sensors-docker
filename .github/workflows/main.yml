@@ -17,7 +17,7 @@ env:
 jobs:
   docker:
     name: testbuilddocker
-    runs-on: arc-runner-setv2
+    runs-on: arc-runner-setv3
     steps:
       -
         name: Checkout
