@@ -29,7 +29,7 @@ sensors:
   updates: ${SENSORS_UPDATES:=true}
   wifi_strength: ${SENSORS_WIFI_STRENGTH:=true}
   wifi_ssid: ${SENSORS_WIFI_SSID:=true}
-  battery: ${SENSORS_BATTERY:=true}
+  battery: ${SENSORS_BATTERY:=false}
   external_drives:
     # Only add mounted drives here, e.g.:
     # Drive1: /media/storage
