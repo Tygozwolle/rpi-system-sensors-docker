@@ -1,4 +1,4 @@
-name: ci
+name: new split build and push dev
 
 on:
   workflow_dispatch:
