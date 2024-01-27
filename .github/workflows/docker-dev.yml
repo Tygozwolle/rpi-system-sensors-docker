@@ -124,6 +124,17 @@ jobs:
 
   check:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+         - linux/amd64
+         - linux/arm64
+         - linux/386 
+         - linux/arm/v7
+         - linux/arm/v6 
+         - linux/arm/v8
+         - linux/arm/v9
     needs:
       - merge
     steps:
@@ -145,7 +156,8 @@ jobs:
         with:
           command: quickview, cves, recommendations
           image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:dev
-          write-comment: true
+          write-comment: false
+          platform: ${{ matrix.platform }}
           sarif-file: sarif.output.json
           summary: true
           github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
