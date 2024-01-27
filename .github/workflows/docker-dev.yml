@@ -116,7 +116,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     needs:
-      - build
+      - merge
     steps:
       - name: Docker Scout
         id: docker-scout
