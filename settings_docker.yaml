@@ -3,7 +3,6 @@ mqtt:
   port: ${MQTT_PORT:=1883} #defaults to 1883
   user: ${MQTT_USER}
   password: ${MQTT_PASSWORD}
-tls:
 deviceName: ${DEVICE_NAME:=test}
 client_id: ${CLIENT_ID:=test}
 timezone: ${TIMEZONE:=Europe/Brussels}
