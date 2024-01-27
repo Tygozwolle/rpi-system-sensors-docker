@@ -143,7 +143,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
-          command: quickview
+          command: quickview, cves
           image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:dev
           write-comment: true
           github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
