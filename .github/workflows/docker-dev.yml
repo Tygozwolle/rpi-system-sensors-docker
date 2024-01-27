@@ -154,7 +154,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
-          command: quickview, cves, recommendations
+          command: quickview, cves, recommendations, sbom
           image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:dev
           write-comment: false
           platform: ${{ matrix.platform }}
