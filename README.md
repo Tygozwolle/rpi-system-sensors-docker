@@ -34,6 +34,7 @@ SENSORS_UPDATES (default 'true')
 SENSORS_WIFI_STRENGTH (default 'true')
 SENSORS_WIFI_SSID (default 'true')
 SENSORS_BATTERY (default 'false')
+SENSOR_DRIVE 
 ```
 
 ## Examples
