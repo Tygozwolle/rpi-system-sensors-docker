@@ -2,8 +2,8 @@ FROM python:3.12.1-alpine3.19 as build
 
 WORKDIR /app
 USER root
-RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/heads/staging.tar.gz" \
-  && tar -xvzf /tmp/staging.tar.gz -C /app --strip-components 1 \
+RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/heads/master.tar.gz" \
+  && tar -xvzf /tmp/master.tar.gz -C /app --strip-components 1 \
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.4.2
