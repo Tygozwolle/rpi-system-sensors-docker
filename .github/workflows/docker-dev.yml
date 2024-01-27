@@ -146,4 +146,13 @@ jobs:
           command: quickview, cves, recommendations
           image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:dev
           write-comment: true
+          sarif-file: sarif.output.json
+          summary: true
           github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
+
+      - name: Upload SARIF result
+        id: upload-sarif
+        if: ${{ github.event_name != 'pull_request_target' }}
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: sarif.output.json          
