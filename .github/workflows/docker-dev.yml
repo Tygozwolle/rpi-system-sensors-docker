@@ -145,5 +145,6 @@ jobs:
         with:
           command: quickview, cves
           image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:dev
+          platform: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9
           write-comment: true
           github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
