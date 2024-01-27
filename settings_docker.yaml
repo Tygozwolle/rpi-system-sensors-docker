@@ -31,6 +31,6 @@ sensors:
   wifi_ssid: ${SENSORS_WIFI_SSID:=true}
   battery: ${SENSORS_BATTERY:=false}
   external_drives:
-    ${SENSOR_DRIVE:}
+    ${SENSOR_DRIVE:=}
     # Only add mounted drives here, e.g.:
     # Drive1: /media/storage
