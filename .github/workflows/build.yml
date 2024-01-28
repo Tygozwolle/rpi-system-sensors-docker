@@ -95,7 +95,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}               
       - name: Docker Scout
         id: docker-scout
-        if: ${{ github.event_name == 'pull_request' }}
+    #    if: ${{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
           command: quickview, cves, recommendations, sbom
