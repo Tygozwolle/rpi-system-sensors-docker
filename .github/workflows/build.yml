@@ -12,15 +12,15 @@ env:
   TEST_TAG: user/app:test
 jobs:
   dockerpush:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       -
         name: Checkout
         uses: actions/checkout@v3
 
-      -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v3.0.0
+   #   -
+    #    name: Set up QEMU
+     #   uses: docker/setup-qemu-action@v3.0.0
    #     with:
     #      platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9
       -
