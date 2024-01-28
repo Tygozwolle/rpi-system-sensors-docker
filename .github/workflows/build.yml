@@ -35,7 +35,7 @@ jobs:
         with:
           images: | 
             tygozwolle/rpi-system-sensors-docker
-             ghcr.io/Tygozwolle/rpi-system-sensors-docker
+            ghcr.io/Tygozwolle/rpi-system-sensors-docker
     #      tags: |
      #       type=ref,event=branch
       #      type=ref,event=pr
@@ -96,7 +96,7 @@ jobs:
         uses: docker/scout-action@v1
         with:
           command: quickview, cves, recommendations, sbom
-          image: tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:latest
+          image: ghcr.io/tygozwolle/rpi-system-sensors-docker/rpi-system-sensors-docker:latest
           write-comment: false
           platform: ${{ matrix.platform }}
           sarif-file: sarif.output.json
