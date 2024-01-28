@@ -17,13 +17,10 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v3
-      - name: Install QEMU
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y qemu-user-static        
-      -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v3.0.0
+
+   #   -
+    #    name: Set up QEMU
+     #   uses: docker/setup-qemu-action@v3.0.0
    #     with:
     #      platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9
       -
