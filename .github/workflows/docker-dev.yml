@@ -3,12 +3,14 @@ name: new split build and push dev
 on:
   workflow_dispatch:
   pull_request:
+  repository_dispatch:
 
 env:
   REGISTRY_IMAGE: tygozwolle/rpi-system-sensors-docker
 
 jobs:
   build:
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
