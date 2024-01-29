@@ -34,6 +34,8 @@ SENSORS_UPDATES (default 'true')
 SENSORS_WIFI_STRENGTH (default 'true')
 SENSORS_WIFI_SSID (default 'true')
 SENSORS_BATTERY (default 'false')
+SENSORS_NET_TX_DATA (default 'true')
+SENSORS_NET_RX_DATA (default 'true')
 SENSOR_DRIVE 
 ```
 
