@@ -32,6 +32,7 @@ sensors:
   wifi_strength: ${SENSORS_WIFI_STRENGTH:=true}
   wifi_ssid: ${SENSORS_WIFI_SSID:=true}
   battery: ${SENSORS_BATTERY:=false}
+  fan: ${SENSOR_FAN:=false}
   external_drives:
     ${SENSOR_DRIVE:=}
     # Only add mounted drives here, e.g.:
