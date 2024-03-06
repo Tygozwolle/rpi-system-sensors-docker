@@ -1,7 +1,8 @@
 name: pull
 on:
   workflow_dispatch:
-  push:
+  schedule: 
+      - cron: '30 11 * * *'
 
 jobs:
   pull:
