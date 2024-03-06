@@ -1,4 +1,4 @@
-name: pull
+name: pull docker image
 on:
   workflow_dispatch:
   schedule: 
