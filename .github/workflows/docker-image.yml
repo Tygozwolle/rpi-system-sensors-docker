@@ -1,0 +1,19 @@
+name: pull docker image
+on:
+  workflow_dispatch:
+  schedule: 
+      - cron: '30 11 * * *'
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest  
+    strategy:
+      fail-fast: false
+      matrix:
+        tag: [latest, dev, v2.3.2, v2.3.1, v2.3.0, v2.2.0, v2.1.1, v2.1.0, v2.0.3, v2.0.2, v2.0.1, v1.0.5, v1.0.4, v1.0.3, v1.0.2, v1.0.1, v1.0.0]
+
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker pull tygozwolle/rpi-system-sensors-docker:${{matrix.tag}}
