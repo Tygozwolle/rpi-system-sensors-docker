@@ -1,6 +1,3 @@
-#!/bin/bash
-dos2unix /app/system_sensors.sh
-dos2unix /app/envsubst
 
 if [ ! -f "/app/config.yaml" ]; then
     /app/envsubst < /app/settings_docker.yaml > /app/config.yaml
