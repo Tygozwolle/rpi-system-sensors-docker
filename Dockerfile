@@ -17,8 +17,7 @@ WORKDIR /app
 COPY --from=build /app /app
 COPY --from=build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 COPY ./ ./
-#RUN chmod a+x ./system_sensors.sh
-#RUN chmod a+x ./envsubst
-CMD python /app/src/system_sensors.py /app/config.yaml
-#./system_sensors.sh
+RUN chmod a+x ./system_sensors.sh
+RUN chmod a+x ./envsubst
+CMD ./system_sensors.sh
 
