@@ -1,3 +1,4 @@
+#!/bin/bash
 dos2unix /app/system_sensors.sh
 dos2unix /app/envsubst
 
