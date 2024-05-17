@@ -33,6 +33,8 @@ sensors:
   wifi_ssid: ${SENSORS_WIFI_SSID:=true}
   battery: ${SENSORS_BATTERY:=false}
   fan: ${SENSOR_FAN:=true}
+  temperature_GPU: ${TEMPERATURE_GPU:=true}
+  load_GPU: ${LOAD_GPU:=true}
   external_drives:
     ${SENSOR_DRIVE:=}
     # Only add mounted drives here, e.g.:
