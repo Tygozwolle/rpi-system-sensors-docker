@@ -2,6 +2,7 @@ FROM python:3.12.2-alpine3.19 as build
 
 WORKDIR /app
 USER root
+RUN apk add wget
 RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/heads/staging.tar.gz" \
   && tar -xvzf /tmp/staging.tar.gz -C /app --strip-components 1 \
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
