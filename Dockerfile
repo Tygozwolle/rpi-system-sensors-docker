@@ -1,4 +1,4 @@
-FROM python:3.12.2 as build
+FROM python:3.12.2-alpine3.19 as build
 
 WORKDIR /app
 USER root
