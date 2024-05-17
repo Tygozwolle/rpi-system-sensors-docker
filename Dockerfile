@@ -8,7 +8,7 @@ RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/hea
 RUN pip install -r /app/requirements.txt 
 RUN GOBIN=/app go install github.com/a8m/envsubst/cmd/envsubst@v1.4.2
 
-FROM python:3.12.2-alpine3.19
+FROM python:3.12.2
 RUN apk add bash wireless-tools
 RUN apk add bash apt
 
