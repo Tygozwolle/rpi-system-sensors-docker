@@ -13,6 +13,8 @@ FROM python:3.12.2-alpine3.19
 RUN apk add bash wireless-tools
 RUN apk add bash apt
 FROM nvidia/cuda:12.3.1-base-ubuntu20.04
+
+RUN apt-get update && apt-get install -y python3
 WORKDIR /app
 
 COPY --from=build /app /app
