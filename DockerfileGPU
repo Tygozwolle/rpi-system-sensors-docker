@@ -22,5 +22,6 @@ COPY ./ ./
 RUN chmod a+x ./system_sensors.sh
 RUN chmod a+x ./envsubst
 FROM python:3.12.3-bookworm
+WORKDIR /app
 CMD ./system_sensors.sh
 
