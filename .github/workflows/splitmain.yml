@@ -51,4 +51,4 @@ jobs:
           platforms: ${{ matrix.version }}
           push: false
           tags: tygozwolle/rpi-system-sensors-docker:latest
-          cache-from: cache-from=type=registry,ref=${{ secrets.REGISTER_DOMAIN }} 
+          cache-from: type=registry,ref=${{ secrets.REGISTER_DOMAIN }} .
