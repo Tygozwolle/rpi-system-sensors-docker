@@ -17,9 +17,9 @@ jobs:
         sudo systemctl restart docker
     - name: upload images
       run: |
-        docker pull python:3.12.2-alpine3.19
-        docker image tag python:3.12.2-alpine3.19 ${{ secrets.REGISTER_DOMAIN }}/python:3.12.2-alpine3.19
-        docker push ${{ secrets.REGISTER_DOMAIN }}/python:3.12.2-alpine3.19
+        docker pull ${{ secrets.REGISTER_DOMAIN }}/python:3.12.2-alpine3.19
+      #  docker image tag python:3.12.2-alpine3.19 ${{ secrets.REGISTER_DOMAIN }}/python:3.12.2-alpine3.19
+       # docker push ${{ secrets.REGISTER_DOMAIN }}/python:3.12.2-alpine3.19
         
       
     
