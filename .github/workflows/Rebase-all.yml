@@ -16,7 +16,7 @@ jobs:
     - name: rebase
       run: |
         gh search prs \
-        --owner 'Tygozwolle' \ # replace with GitHub owner
+        --owner Tygozwolle \ 
         --state open \
         --label dependencies \
         --limit 200 \
