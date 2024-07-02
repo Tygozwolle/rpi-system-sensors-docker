@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: update registry
 
 on:
   workflow_dispatch:
