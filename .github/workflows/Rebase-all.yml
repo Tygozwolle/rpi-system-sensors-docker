@@ -2,7 +2,7 @@ name: rebase all
 
 on:
   push:
-    branches: [ "master" ]
+ #   branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
