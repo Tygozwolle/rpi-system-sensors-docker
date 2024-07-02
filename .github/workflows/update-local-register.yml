@@ -1,0 +1,15 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: upload images
+      run: docker pull tygozwolle/rpi-system-sensors-docker:latest
+    
