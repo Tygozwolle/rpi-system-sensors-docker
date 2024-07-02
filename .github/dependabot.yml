@@ -9,10 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-  #  target-branch: staging
+    target-branch: staging
 
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"      
- # target-branch: staging
+    target-branch: staging
