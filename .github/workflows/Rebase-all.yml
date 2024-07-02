@@ -22,4 +22,5 @@ jobs:
         --limit 200 \
         --json "url" --jq ".[] | .url" \
         | xargs -n 1 -I{} \
+        sleep 10 \
         gh pr comment -b "@dependabot rebase" {}
