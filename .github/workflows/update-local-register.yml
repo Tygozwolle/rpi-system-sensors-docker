@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Insecure Docker Repository
+      run: |
+        sudo truncate -s-2 /etc/docker/daemon.json
+        echo ", \"insecure-registries\": [\"${{ vars.DOCKER_HOST }}\"]}" | sudo tee -a /etc/docker/daemon.json
+        sudo systemctl restart docker
     - name: upload images
       run: |
         docker pull python:3.12.2-alpine3.19
