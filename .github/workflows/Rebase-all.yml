@@ -17,7 +17,7 @@ jobs:
       run: |
         gh search prs \
         --owner Tygozwolle \ 
-        --state open \
+        --state=open \
         --label dependencies \
         --limit 200 \
         --json "url" --jq ".[] | .url" \
