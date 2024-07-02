@@ -47,4 +47,4 @@ jobs:
           context: .
           platforms: ${{ matrix.version }}
           push: false
-          tags: tygozwolle/rpi-system-sensors-docker:latest
+          tags: ${{ secrets.REGISTER_DOMAIN }}tygozwolle/rpi-system-sensors-docker:latest
