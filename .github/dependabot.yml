@@ -27,15 +27,11 @@ updates:
       - "Tygozwolle"
 
  # target-branch: staging
- updates:
   - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     assignees:
       - "Tygozwolle"
-
-#    target-branch: staging
-
     open-pull-requests-limit: 15
 
