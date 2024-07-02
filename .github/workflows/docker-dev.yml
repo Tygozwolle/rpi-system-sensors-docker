@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
- #   if: github.actor == 'Tygozwolle'
+    if: github.actor == 'Tygozwolle'
     strategy:
       fail-fast: false
       matrix:
