@@ -2,8 +2,8 @@ name: new split build and push dev
 
 on:
   workflow_dispatch:
-  pull_request:
-  repository_dispatch:
+#  pull_request:
+#  repository_dispatch:
 
 env:
   REGISTRY_IMAGE: tygozwolle/rpi-system-sensors-docker
@@ -11,6 +11,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.actor == 'Tygozwolle'
     strategy:
       fail-fast: false
       matrix:
@@ -59,6 +60,8 @@ jobs:
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       -
         name: Export digest
         run: |
