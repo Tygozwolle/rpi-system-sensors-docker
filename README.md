@@ -1,6 +1,6 @@
 # Dockerized RPI System Sensors
-
-Alpine-based docker image of the RPI System sensors project: https://github.com/Sennevds/system_sensors
+ 
+Alpine-based docker image of the RPI System sensors project: <https://github.com/tygozwolle/system_sensors>
 
 ## Environment Variables
 ```
@@ -33,6 +33,10 @@ SENSORS_LAST_MESSAGE (default 'true')
 SENSORS_UPDATES (default 'true')
 SENSORS_WIFI_STRENGTH (default 'true')
 SENSORS_WIFI_SSID (default 'true')
+SENSORS_BATTERY (default 'false')
+SENSORS_NET_TX_DATA (default 'true')
+SENSORS_NET_RX_DATA (default 'true')
+SENSOR_DRIVE 
 ```
 
 ## Examples
@@ -45,7 +49,7 @@ version: "3"
 services:
 
   sensors:
-    image: tomquist/rpi-system-sensors:latest
+    image: tygozwolle/rpi-system-sensors-docker:latest
     container_name: system-sensors
     hostname: rpi
     environment:
@@ -65,6 +69,6 @@ docker run -d \
   -h $(hostname -f)
   --device /dev/vchiq \
   -e MQTT_HOST=192.168.100.100 \
-  tomquist/rpi-system-sensors:latest
+  tygozwolle/rpi-system-sensors-docker:latest
 ```
 

@@ -18,6 +18,8 @@ sensors:
   load_15m: ${SENSORS_LOAD15:=true}
   net_tx: ${SENSORS_NET_TX:=true}
   net_rx: ${SENSORS_NET_RX:=true}
+  net_tx_data: ${SENSORS_NET_TX_DATA:=true}
+  net_rx_data: ${SENSORS_NET_RX_DATA:=true}
   swap_usage: ${SENSORS_SWAP_USAGE:=true}
   power_status: ${SENSORS_POWER_STATUS:=true}
   last_boot: ${SENSORS_LAST_BOOT:=true}
@@ -29,6 +31,9 @@ sensors:
   updates: ${SENSORS_UPDATES:=true}
   wifi_strength: ${SENSORS_WIFI_STRENGTH:=true}
   wifi_ssid: ${SENSORS_WIFI_SSID:=true}
+  battery: ${SENSORS_BATTERY:=false}
+  fan: ${SENSOR_FAN:=true}
   external_drives:
+    ${SENSOR_DRIVE:=}
     # Only add mounted drives here, e.g.:
     # Drive1: /media/storage

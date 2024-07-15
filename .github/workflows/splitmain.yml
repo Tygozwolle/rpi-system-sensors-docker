@@ -1,22 +1,21 @@
-name: testbuild dev
+name: testbuildsplit2
 
 on:
   workflow_dispatch:
   push:
-   branches:
-     - master
- # pull_request:
+    branches:
+      - master
+  pull_request:
   #check_run:
   repository_dispatch:
-  
-  #schedule:
-   # - cron: 30 11 * * *
-  
+    
 env:
   TEST_TAG: user/app:test
 jobs:
-  docker:
-    name: testbuilddocker
+  dockersplit:
+    strategy: 
+      matrix:
+        version: [ linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9]
     runs-on: ubuntu-latest
     steps:
       -
@@ -34,18 +33,18 @@ jobs:
           name: workspace_artifacts
           path: ${{ github.workspace }}
 
-      -
-        name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}          
+      #-
+     #   name: Login to Docker Hub
+    #    uses: docker/login-action@v2
+   #     with:
+  #        username: ${{ secrets.DOCKERHUB_USERNAME }}
+ #         password: ${{ secrets.DOCKERHUB_TOKEN }}          
    
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm/v8,linux/arm/v9
-          push: true
-          tags: tygozwolle/rpi-system-sensors-docker:dev
+          platforms: ${{ matrix.version }}
+          push: false
+          tags: tygozwolle/rpi-system-sensors-docker:latest
