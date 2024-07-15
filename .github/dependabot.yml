@@ -9,12 +9,29 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    assignees:
+      - "Tygozwolle"
+
+#    target-branch: staging
+
     open-pull-requests-limit: 15
-  #  target-branch: staging
 
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily" 
+
+      interval: "daily"      
+#    target-branch: staging
     open-pull-requests-limit: 15
+    assignees:
+      - "Tygozwolle"
+
  # target-branch: staging
+#  - package-ecosystem: "pip" # See documentation for possible values
+#    directory: "/" # Location of package manifests
+#    schedule:
+#      interval: "daily"
+#    assignees:
+#      - "Tygozwolle"
+#    open-pull-requests-limit: 15
+
