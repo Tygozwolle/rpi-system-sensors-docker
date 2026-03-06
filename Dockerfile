@@ -2,6 +2,7 @@ FROM python:3.12.6-alpine3.19 as build
 
 WORKDIR /app
 USER root
+ENV YES_YOU_ARE_IN_A_CONTAINER=True
 RUN wget -P /tmp/ "https://github.com/Tygozwolle/system_sensors/archive/refs/tags/2.4.0.tar.gz" \
   && tar -xvzf /tmp/2.4.0.tar.gz -C /app --strip-components 1 \
   && apk --update-cache add --virtual build-dependencies build-base linux-headers go
