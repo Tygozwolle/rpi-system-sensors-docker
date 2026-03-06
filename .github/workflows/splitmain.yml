@@ -2,10 +2,10 @@ name: testbuildsplit2
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-  pull_request:
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
   #check_run:
   repository_dispatch:
     
@@ -32,7 +32,7 @@ jobs:
         with:
           name: workspace_artifacts
           path: ${{ github.workspace }}
-          merge-multiple: true
+          overwrite: true
 
       #-
      #   name: Login to Docker Hub
